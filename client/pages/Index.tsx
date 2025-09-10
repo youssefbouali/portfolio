@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import {
   Github,
   Mail,
+  Linkedin,
   ExternalLink,
   MapPin,
   Phone,
@@ -300,6 +301,15 @@ export default function Index() {
                 >
                   <Github className="h-4 w-4" /> GitHub
                 </a>
+
+                <a
+                  href="https://linkedin.com/in/youssef1bouali"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
+                >
+                  <Linkedin className="h-4 w-4" /> Linkedin
+                </a>
               </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -448,7 +458,7 @@ export default function Index() {
 
           <ProjectCard
             title="GreenerTech — Greenhouse Monitoring"
-            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, multi-sensors, and a React.js web interface for disease detection and environmental optimization."
+            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, and a React.js web interface for disease detection and environmental optimization."
           />
 
           <ProjectCard
@@ -743,6 +753,17 @@ export default function Index() {
               className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
             >
               <Github className="h-4 w-4" /> github.com/youssefbouali
+            </a>
+          </div>
+          <div className="rounded-lg border p-5 bg-card/50">
+            <p className="text-sm text-muted-foreground">Linkedin</p>
+            <a
+              href="https://linkedin.com/in/youssef1bouali"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
+            >
+              <Linkedin className="h-4 w-4" /> linkedin.com/in/youssef1bouali
             </a>
           </div>
         </div>

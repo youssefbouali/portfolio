@@ -47,6 +47,15 @@ export default function Navbar() {
             <Github className="h-5 w-5" />
           </a>
           <a
+            href="https://linkedin.com/in/youssef1bouali"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Linkedin"
+            className="text-muted-foreground hover:text-foreground"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a
             href="mailto:mr.boualiyoussef@gmail.com"
             aria-label="Email"
             className="text-muted-foreground hover:text-foreground"
@@ -96,6 +105,14 @@ export default function Navbar() {
                 className="text-foreground inline-flex items-center gap-2"
               >
                 <Github className="h-5 w-5" /> GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/youssef1bouali"
+                target="_blank"
+                rel="noreferrer"
+                className="text-foreground inline-flex items-center gap-2"
+              >
+                <Linkedin className="h-5 w-5" /> Linkedin
               </a>
               <a
                 href="mailto:mr.boualiyoussef@gmail.com"
