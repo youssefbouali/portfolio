@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Github, Mail, Download } from "lucide-react";
+import { Menu, X, Github, Mail, Linkedin, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
