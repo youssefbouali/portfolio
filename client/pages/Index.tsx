@@ -1,4 +1,6 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
+import { parse, differenceInMonths } from "date-fns";
+
 import {
   Github,
   Mail,
@@ -46,10 +48,10 @@ function ProjectCard({
   href?: string;
 }) {
   return (
-    <div className="group rounded-lg border p-5 bg-card/50 hover:shadow-sm transition-shadow">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="font-semibold text-lg">{title}</h3>
+    <div className="group rounded-lg border p-5 bg-card/50 hover:shadow-sm transition-shadow min-w-0">
+      <div className="flex items-start justify-between gap-4 min-w-0">
+        <div className="min-w-0">
+          <h3 className="font-semibold text-lg break-words">{title}</h3>
           {stack ? (
             <p className="text-xs text-muted-foreground mt-1">{stack}</p>
           ) : null}
@@ -59,7 +61,7 @@ function ProjectCard({
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="text-primary inline-flex items-center gap-1 text-sm"
+            className="text-primary inline-flex items-center gap-1 text-sm shrink-0 break-words"
           >
             Visit <ExternalLink className="h-4 w-4" />
           </a>
@@ -77,18 +79,53 @@ function TimelineItem({
   title,
   place,
   children,
+  showDuration,
 }: {
   period: string;
   title: string;
   place?: string;
   children?: React.ReactNode;
+  showDuration?: boolean;
 }) {
+  const calcDuration = (p: string) => {
+    try {
+      const parts = p.split(/\s*[-–—]\s*/).map((s) => s.trim());
+      if (parts.length !== 2) return "";
+      const parseDate = (s: string) => {
+        let d = parse(s, "MMM yyyy", new Date());
+        if (isNaN(d.getTime())) {
+          d = parse(s, "yyyy", new Date());
+        }
+        return d;
+      };
+      const start = parseDate(parts[0]);
+      const end = parseDate(parts[1]);
+      if (isNaN(start.getTime()) || isNaN(end.getTime())) return "";
+      let months = differenceInMonths(end, start) + 1;
+      if (months <= 0) months = 0;
+      const years = Math.floor(months / 12);
+      const remMonths = months % 12;
+      const partsOut: string[] = [];
+      if (years > 0) partsOut.push(`${years} yr${years > 1 ? "s" : ""}`);
+      if (remMonths > 0)
+        partsOut.push(`${remMonths} mo${remMonths > 1 ? "s" : ""}`);
+      return partsOut.join(" ");
+    } catch {
+      return "";
+    }
+  };
+
+  const duration = showDuration ? calcDuration(period) : "";
+
   return (
     <div className="relative pl-6">
       <div className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-primary" />
       <div className="grid md:grid-cols-[240px_1fr] gap-2 md:gap-6">
-        <div className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">
-          {period}
+        <div className="text-xs md:text-sm text-muted-foreground">
+          <div>{period}</div>
+          {duration ? (
+            <div className="text-xs text-muted-foreground mt-1">{duration}</div>
+          ) : null}
         </div>
         <div>
           <p className="font-medium">{title}</p>
@@ -188,6 +225,7 @@ export default function Index() {
           "Amazon AWS",
           "CI/CD",
           "Jenkins",
+          "GitHub Actions",
         ],
       },
       {
@@ -331,16 +369,20 @@ export default function Index() {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-2 text-xs">
-                {["Docker", "Kubernetes", "Jenkins", "Ansible", "CI/CD"].map(
-                  (t) => (
-                    <span
-                      key={t}
-                      className="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-card/60"
-                    >
-                      {t}
-                    </span>
-                  ),
-                )}
+                {[
+                  "Web Development",
+                  "Databases",
+                  "DevOps",
+                  "Server Administration",
+                  "Linux",
+                ].map((t) => (
+                  <span
+                    key={t}
+                    className="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-card/60"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -510,6 +552,7 @@ export default function Index() {
       <Section id="experience" title="Experience">
         <div className="space-y-6 border-l pl-6">
           <TimelineItem
+            showDuration={true}
             period="Jul 2025 — Aug 2025"
             title="PFA Intern — Orange Digital Center, Agadir"
           >
@@ -517,12 +560,14 @@ export default function Index() {
             an autonomous robot with sensors and camera.
           </TimelineItem>
           <TimelineItem
+            showDuration={true}
             period="Jul 2024 — Aug 2024"
             title="Final‑year Bachelor Intern — National Office of Airports, Essaouira"
           >
             Built a maintenance management platform for airport equipment.
           </TimelineItem>
           <TimelineItem
+            showDuration={true}
             period="Nov 2023 — Jun 2024"
             title="Member — UPM IT Club"
           >
@@ -531,6 +576,7 @@ export default function Index() {
             development, enhancing technical skills and teamwork experience.
           </TimelineItem>
           <TimelineItem
+            showDuration={true}
             period="Nov 2023 — Jun 2024"
             title="Member — UPM Enactus"
           >
@@ -539,13 +585,18 @@ export default function Index() {
             management skills to create sustainable impact.
           </TimelineItem>
           <TimelineItem
+            showDuration={true}
             period="Jun 2023 — Jul 2023"
             title="End‑of‑training Intern — Consamar"
           >
             Installation and configuration of machines and a supervision system.
           </TimelineItem>
 
-          <TimelineItem period="Sep 2019 — Aug 2023" title="Founder — Wsoum">
+          <TimelineItem
+            showDuration={true}
+            period="Sep 2019 — Aug 2023"
+            title="Founder — Wsoum"
+          >
             Wsoum is a digital platform providing a wide ecosystem of web
             applications and digital services in areas like social networking,
             search engines, operating systems, solutions, and classifieds,
@@ -553,6 +604,7 @@ export default function Index() {
           </TimelineItem>
 
           <TimelineItem
+            showDuration={true}
             period="Sep 2019 — Dec 2020"
             title="Founder Member — OBBHgroup"
           >
@@ -730,7 +782,7 @@ export default function Index() {
             <p className="text-sm text-muted-foreground">Email</p>
             <a
               href="mailto:mr.boualiyoussef@gmail.com"
-              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
+              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary break-all"
             >
               <Mail className="h-4 w-4" /> mr.boualiyoussef@gmail.com
             </a>
@@ -739,7 +791,7 @@ export default function Index() {
             <p className="text-sm text-muted-foreground">Phone</p>
             <a
               href="tel:+212691067361"
-              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
+              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary break-all"
             >
               <Phone className="h-4 w-4" /> +212 691067361
             </a>
@@ -750,7 +802,7 @@ export default function Index() {
               href="https://github.com/youssefbouali"
               target="_blank"
               rel="noreferrer"
-              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
+              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary break-all"
             >
               <Github className="h-4 w-4" /> github.com/youssefbouali
             </a>
@@ -761,7 +813,7 @@ export default function Index() {
               href="https://linkedin.com/in/youssef1bouali"
               target="_blank"
               rel="noreferrer"
-              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary"
+              className="mt-1 inline-flex items-center gap-2 font-medium hover:text-primary break-all"
             >
               <Linkedin className="h-4 w-4" /> linkedin.com/in/youssef1bouali
             </a>
