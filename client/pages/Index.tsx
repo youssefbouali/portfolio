@@ -500,11 +500,13 @@ export default function Index() {
 
           <ProjectCard
             title="GreenerTech — Greenhouse Monitoring"
-            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, and a React.js web interface for disease detection and environmental optimization."
+            stack="Flask · React · PostgreSQL · WebSockets · WebRTC · Docker"
+            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, React.js web interface, WebSockets/WebRTC for real-time telemetry and video, PostgreSQL for time-series data, and Docker for deployment."
           />
 
           <ProjectCard
             title="AeroMaint — Airport Equipment Maintenance"
+            stack="Angular · Django · PostgreSQL · Kubernetes"
             href="https://github.com/youssefbouali/AeroMaint"
             description="Airport Equipment Maintenance Management Platform."
           />
@@ -524,6 +526,7 @@ export default function Index() {
 
           <ProjectCard
             title="BusinessIntelligence_Project"
+            stack="Talend · SQL Server · Visual Studio · SSAS"
             href="https://github.com/youssefbouali/BusinessIntelligence_Project"
             description="Data warehouse implementation and sales visualization using Talend (ComptoirDB case study)."
           />
@@ -586,7 +589,7 @@ export default function Index() {
           </TimelineItem>
           <TimelineItem
             showDuration={true}
-            period="Jun 2023 — Jul 2023"
+            period="Jun 2023 — Jun 2023"
             title="End‑of‑training Intern — Consamar"
           >
             Installation and configuration of machines and a supervision system.
