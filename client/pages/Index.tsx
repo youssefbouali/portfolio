@@ -450,7 +450,7 @@ export default function Index() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <ProjectCard
             title="Morist – Moroccan Tourist Platform"
-            stack="Laravel · Firebase · React"
+            stack="Laravel · Firebase · React · Vercel"
             href="https://github.com/youssefbouali/Morist"
             description="End‑to‑end platform connecting travelers with Moroccan destinations and experiences."
           />
@@ -500,7 +500,7 @@ export default function Index() {
 
           <ProjectCard
             title="GreenerTech — Greenhouse Monitoring"
-            stack="Flask · React · PostgreSQL · WebSockets · WebRTC · Docker"
+            stack="Flask · React · PostgreSQL · WebSockets · WebRTC · Docker · AWS EC2"
             description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, React.js web interface, WebSockets/WebRTC for real-time telemetry and video, PostgreSQL for time-series data, and Docker for deployment."
           />
 
