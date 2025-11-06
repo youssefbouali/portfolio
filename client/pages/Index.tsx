@@ -8,7 +8,6 @@ import {
   ExternalLink,
   MapPin,
   Phone,
-  Download,
 } from "lucide-react";
 
 function Section({
@@ -322,16 +321,6 @@ export default function Index() {
                 </a>
 
                 <a
-                  href="/Youssef_Bouali_CV.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  download
-                  className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
-                >
-                  <Download className="h-4 w-4" /> Download CV
-                </a>
-
-                <a
                   href="https://github.com/youssefbouali"
                   target="_blank"
                   rel="noreferrer"
@@ -538,7 +527,7 @@ export default function Index() {
           />
 
           <ProjectCard
-            title="Rabet — URL Shortener"
+            title="Rabet ��� URL Shortener"
             href="https://rabet.wsoum.eu.org/"
             description="Link shortening service with analytics."
           />
@@ -554,6 +543,14 @@ export default function Index() {
       {/* Experience */}
       <Section id="experience" title="Experience">
         <div className="space-y-6 border-l pl-6">
+          <TimelineItem
+            showDuration={true}
+            period="Sep 2025 — Present"
+            title="Software Engineer — BoviClouds, Agadir"
+          >
+            Development of a real‑time cattle breed traceability and breeding
+            optimization system.
+          </TimelineItem>
           <TimelineItem
             showDuration={true}
             period="Jul 2025 — Aug 2025"

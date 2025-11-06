@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X, Github, Mail, Linkedin, Download } from "lucide-react";
+import { Menu, X, Github, Mail, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
@@ -63,17 +63,6 @@ export default function Navbar() {
             <Mail className="h-5 w-5" />
           </a>
 
-          <a
-            href="/Youssef_Bouali_CV.pdf"
-            target="_blank"
-            rel="noreferrer"
-            download
-            className="inline-flex items-center gap-2 rounded-md border px-3 py-1 text-sm hover:bg-accent"
-            aria-label="Download CV"
-          >
-            <Download className="h-4 w-4" /> CV
-          </a>
-
           <ThemeToggle />
         </nav>
         <button
@@ -119,15 +108,6 @@ export default function Navbar() {
                 className="text-foreground inline-flex items-center gap-2"
               >
                 <Mail className="h-5 w-5" /> Email
-              </a>
-              <a
-                href="/Youssef_Bouali_CV.pdf"
-                target="_blank"
-                rel="noreferrer"
-                download
-                className="text-foreground inline-flex items-center gap-2"
-              >
-                <Download className="h-5 w-5" /> CV
               </a>
               <div className="ml-auto">
                 <ThemeToggle />
