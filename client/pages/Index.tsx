@@ -438,22 +438,28 @@ export default function Index() {
       <Section id="projects" title="Projects">
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <ProjectCard
+            title="VibraGuard – Moroccan Tourist Platform"
+            stack="SpringBoot · MQTT · Kafka · Spark · Oracle · MongoDB · React · Kubernetes · HardHat · Random Forest · GCP"
+            href="#"
+            description="Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies."
+          />
+          <ProjectCard
             title="Morist – Moroccan Tourist Platform"
             stack="Laravel · Firebase · React · Vercel"
             href="https://github.com/youssefbouali/Morist"
-            description="End‑to‑end platform connecting travelers with Moroccan destinations and experiences."
+            description="End-to-end platform connecting travelers with Moroccan destinations and experiences."
           />
           <ProjectCard
             title="Hotel Management"
             stack="Java · Oracle Database"
             href="https://github.com/youssefbouali/Gestion-Hoteliere-Project"
-            description="Property and booking management with dashboards and role‑based access."
+            description="Property and booking management with dashboards and role-based access."
           />
           <ProjectCard
             title="Todo App (Express + JWT API)"
             stack="Express · JWT · MongoDB"
             href="https://github.com/youssefbouali/todoApp_jwtAPI"
-            description="Token‑secured REST API with CRUD operations and user authentication."
+            description="Token-secured REST API with CRUD operations and user authentication."
           />
           <ProjectCard
             title="Library App (JEE)"
@@ -467,7 +473,7 @@ export default function Index() {
             description="Design and implementation of a system for deploying, managing, and supervising Linux infrastructures."
           />
           <ProjectCard
-            title="Debian‑based Distributions"
+            title="Debian-based Distributions"
             description="Custom distributions focused on Home · Pro · Security · Server."
             href="https://sourceforge.net/projects/wsoumos/"
           />
@@ -479,7 +485,7 @@ export default function Index() {
           <ProjectCard
             title="Bawaab — Search Engine"
             href="https://bawaab.wsoum.eu.org"
-            description="Web scraping and full‑text search with SphinxSearch."
+            description="Web scraping and full-text search with SphinxSearch."
           />
           <ProjectCard
             title="Mbiaa — Classifieds"
@@ -523,7 +529,7 @@ export default function Index() {
           <ProjectCard
             title="Wsoum Shop — WooCommerce Store"
             href="https://shop.wsoum.eu.org/"
-            description="E‑commerce store built with WooCommerce on WordPress."
+            description="E-commerce store built with WooCommerce on WordPress."
           />
 
           <ProjectCard
@@ -545,10 +551,17 @@ export default function Index() {
         <div className="space-y-6 border-l pl-6">
           <TimelineItem
             showDuration={true}
+            period="Feb 2026 — May 2026"
+            title="Data & Software Engineer — OCP, Safi"
+          >
+            Development of a Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies.
+          </TimelineItem>
+          <TimelineItem
+            showDuration={true}
             period="Sep 2025 — Present"
             title="Software Engineer — BoviClouds, Agadir"
           >
-            Development of a real‑time cattle breed traceability and breeding
+            Development of a real-time cattle breed traceability and breeding
             optimization system.
           </TimelineItem>
           <TimelineItem
@@ -556,13 +569,13 @@ export default function Index() {
             period="Jul 2025 — Aug 2025"
             title="PFA Intern — Orange Digital Center, Agadir"
           >
-            Backend development for a real‑time surveillance system using AI and
+            Backend development for a real-time surveillance system using AI and
             an autonomous robot with sensors and camera.
           </TimelineItem>
           <TimelineItem
             showDuration={true}
             period="Jul 2024 — Aug 2024"
-            title="Final‑year Bachelor Intern — National Office of Airports, Essaouira"
+            title="Final-year Bachelor Intern — National Office of Airports, Essaouira"
           >
             Built a maintenance management platform for airport equipment.
           </TimelineItem>
@@ -587,7 +600,7 @@ export default function Index() {
           <TimelineItem
             showDuration={true}
             period="Jun 2023 — Jun 2023"
-            title="End‑of‑training Intern — Consamar"
+            title="End-of-training Intern — Consamar"
           >
             Installation and configuration of machines and a supervision system.
           </TimelineItem>
