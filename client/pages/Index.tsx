@@ -533,7 +533,7 @@ export default function Index() {
           />
 
           <ProjectCard
-            title="Rabet ��� URL Shortener"
+            title="Rabet — URL Shortener"
             href="https://rabet.wsoum.eu.org/"
             description="Link shortening service with analytics."
           />
@@ -551,18 +551,18 @@ export default function Index() {
         <div className="space-y-6 border-l pl-6">
           <TimelineItem
             showDuration={true}
-            period="Feb 2026 — May 2026"
-            title="Data & Software Engineer — OCP, Safi"
-          >
-            Development of a Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies.
-          </TimelineItem>
-          <TimelineItem
-            showDuration={true}
             period="Sep 2025 — Present"
             title="Software Engineer — BoviClouds, Agadir"
           >
             Development of a real-time cattle breed traceability and breeding
             optimization system.
+          </TimelineItem>
+          <TimelineItem
+            showDuration={true}
+            period="Feb 2026 — May 2026"
+            title="Data & Software Engineer — OCP, Safi"
+          >
+            Development of a Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies.
           </TimelineItem>
           <TimelineItem
             showDuration={true}
