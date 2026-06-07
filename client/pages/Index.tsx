@@ -438,7 +438,7 @@ export default function Index() {
       <Section id="projects" title="Projects">
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <ProjectCard
-            title="VibraGuard – Predictive Maintenance Platform for Industrial Motors"
+            title="VibraGuard — Predictive Maintenance Platform for Industrial Motors"
             stack="SpringBoot · React · MQTT · Kafka · Spark · Random Forest · Oracle · MongoDB · HardHat · Kubernetes · GCP"
             description="Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies."
           />
@@ -457,7 +457,7 @@ export default function Index() {
           />
 		  
           <ProjectCard
-            title="Morist – Moroccan Tourist Platform"
+            title="Morist — Moroccan Tourist Platform"
             stack="Laravel · Firebase · React · Vercel"
             href="https://github.com/youssefbouali/Morist"
             description="End-to-end platform connecting travelers with Moroccan destinations and experiences."
