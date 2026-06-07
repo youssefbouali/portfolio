@@ -439,7 +439,7 @@ export default function Index() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <ProjectCard
             title="VibraGuard — Predictive Maintenance Platform for Industrial Motors"
-            stack="SpringBoot · React · MQTT · Kafka · Spark · Random Forest · Oracle · MongoDB · HardHat · Kubernetes · GCP"
+            stack="SpringBoot · React · MQTT · Kafka · Spark · Random Forest · Oracle · MongoDB · HardHat · IPFS · Kubernetes · GCP"
             description="Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies."
           />
 
