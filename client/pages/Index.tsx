@@ -440,14 +440,54 @@ export default function Index() {
           <ProjectCard
             title="VibraGuard – Moroccan Tourist Platform"
             stack="SpringBoot · React · MQTT · Kafka · Spark · Random Forest · Oracle · MongoDB · HardHat · Kubernetes · GCP"
-            href="#"
             description="Smart Platform for Predictive Maintenance of Industrial Motors using IoT, AI, and Blockchain technologies."
           />
+
+          <ProjectCard
+            title="GreenerTech — Greenhouse Monitoring"
+            stack="Flask · React · PostgreSQL · WebSockets · WebRTC · Docker · AWS EC2 · AWS S3"
+            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, React.js web interface, WebSockets/WebRTC for real-time telemetry and video, PostgreSQL for time-series data, and Docker for deployment."
+          />
+
+          <ProjectCard
+            title="AeroMaint — Airport Equipment Maintenance"
+            stack="Angular · Django · PostgreSQL · Kubernetes"
+            href="https://github.com/youssefbouali/AeroMaint"
+            description="Airport Equipment Maintenance Management Platform."
+          />
+		  
           <ProjectCard
             title="Morist – Moroccan Tourist Platform"
             stack="Laravel · Firebase · React · Vercel"
             href="https://github.com/youssefbouali/Morist"
             description="End-to-end platform connecting travelers with Moroccan destinations and experiences."
+          />
+
+          <ProjectCard
+            title="EMS — Exams Management System"
+            stack="CodeIgniter · Bootstrap · MySQL"
+            href="https://github.com/youssefbouali/EMS"
+            description="Exams management platform for schools and institutions."
+          />
+		  
+          <ProjectCard
+            title="DGS OS — Linux Deployment & Supervision"
+            href="https://sourceforge.net/projects/wsoumos-dgs/files/"
+            description="Design and implementation of a system for deploying, managing, and supervising Linux infrastructures."
+          />
+
+          <ProjectCard
+            title="DataAnalysis_Electromenagers"
+            stack="Selenium · Pandas · Matplotlib"
+            href="https://github.com/youssefbouali/DataAnalysis_Project"
+            description="Web scraping, data cleaning with Pandas, and visualizations with Matplotlib to analyze prices and promotions of home appliances."
+          />
+
+          <ProjectCard
+            title="BusinessIntelligence_Project"
+            stack="Talend · SQL Server · Visual Studio · SSAS"
+            href="https://github.com/youssefbouali/BusinessIntelligence_Project"
+            description="Data warehouse implementation and sales visualization using Talend (ComptoirDB case study)."
           />
           <ProjectCard
             title="Hotel Management"
@@ -468,15 +508,11 @@ export default function Index() {
             description="Catalog, members, and borrowing workflows for libraries."
           />
           <ProjectCard
-            title="DGS OS — Linux Deployment & Supervision"
-            href="https://sourceforge.net/projects/wsoumos-dgs/files/"
-            description="Design and implementation of a system for deploying, managing, and supervising Linux infrastructures."
-          />
-          <ProjectCard
             title="Debian-based Distributions"
             description="Custom distributions focused on Home · Pro · Security · Server."
             href="https://sourceforge.net/projects/wsoumos/"
           />
+		  
           <ProjectCard
             title="Tumidia — Social Network"
             href="https://tumidia.wsoum.eu.org"
@@ -487,44 +523,6 @@ export default function Index() {
             href="https://bawaab.wsoum.eu.org"
             description="Web scraping and full-text search with SphinxSearch."
           />
-          <ProjectCard
-            title="Mbiaa — Classifieds"
-            href="https://mbiaa.wsoum.eu.org"
-            description="Buy and sell listings with categories and filters."
-          />
-
-          <ProjectCard
-            title="GreenerTech — Greenhouse Monitoring"
-            stack="Flask · React · PostgreSQL · WebSockets · WebRTC · Docker · AWS EC2 · AWS S3"
-            description="Real-time tomato greenhouse monitoring with an autonomous robot, Jetson Nano integration, Arduino-based control, multi-sensors, Flask backend API, React.js web interface, WebSockets/WebRTC for real-time telemetry and video, PostgreSQL for time-series data, and Docker for deployment."
-          />
-
-          <ProjectCard
-            title="AeroMaint — Airport Equipment Maintenance"
-            stack="Angular · Django · PostgreSQL · Kubernetes"
-            href="https://github.com/youssefbouali/AeroMaint"
-            description="Airport Equipment Maintenance Management Platform."
-          />
-
-          <ProjectCard
-            title="EMS — Exams Management System"
-            stack="CodeIgniter · Bootstrap · MySQL"
-            href="https://github.com/youssefbouali/EMS"
-            description="Exams management platform for schools and institutions."
-          />
-
-          <ProjectCard
-            title="DataAnalysis_Electromenagers"
-            href="https://github.com/youssefbouali/DataAnalysis_Project"
-            description="Web scraping, data cleaning with Pandas, and visualizations with Matplotlib to analyze prices and promotions of home appliances."
-          />
-
-          <ProjectCard
-            title="BusinessIntelligence_Project"
-            stack="Talend · SQL Server · Visual Studio · SSAS"
-            href="https://github.com/youssefbouali/BusinessIntelligence_Project"
-            description="Data warehouse implementation and sales visualization using Talend (ComptoirDB case study)."
-          />
 
           <ProjectCard
             title="Wsoum Shop — WooCommerce Store"
@@ -533,15 +531,21 @@ export default function Index() {
           />
 
           <ProjectCard
-            title="Rabet — URL Shortener"
-            href="https://rabet.wsoum.eu.org/"
-            description="Link shortening service with analytics."
-          />
-
-          <ProjectCard
             title="Wsoum Maps"
             href="https://maps.wsoum.eu.org/"
             description="Service for browsing maps, routes and locations."
+          />
+		  
+          <ProjectCard
+            title="Mbiaa — Classifieds"
+            href="https://mbiaa.wsoum.eu.org"
+            description="Buy and sell listings with categories and filters."
+          />
+
+          <ProjectCard
+            title="Rabet — URL Shortener"
+            href="https://rabet.wsoum.eu.org/"
+            description="Link shortening service with analytics."
           />
         </div>
       </Section>
